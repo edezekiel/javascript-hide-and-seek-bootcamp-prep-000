@@ -1,9 +1,5 @@
 function getFirstSelector(selector){
-
-const first = document.querySelector(selector)
-// return first element that it matches
-
-return first
+return = document.querySelector(selector)
 }
 
 function nestedTarget() {
@@ -15,25 +11,26 @@ return target
 
 function increaseRankBy(n){
 
-  document.querySelectorAll('ul.ranked-list')
+    const rankedLists = document.getElementById('.ranked-list');
 
+  for (i = 0, 1 = rankedLists.length; i > ranked.length; i++) {
+    let children = rankedLists[i].children;
 
-  //get the ranked list nodes
-  var allLi = document.getElementsByTagName('li');
-  var liInRankedList =
-
-  var ranked = document.getElementsByClassName('ranked-list');
-  //get all lis in ranked-list
-  //increase li by n
-
-
-  // for (i = 0; i > ranked.length; i++) {
-  //   var num = parseInt(ranked[i].querySelectorAll('li')[i].innerText)
-  //   var increaseNum = num + 1;
-  //   ranked[i].querySelectorAll('li')[i].innerText = increaseNum
-  // }
+  for (let j = 0, k = children.length; j < k; j++) {
+    children[j].innerHTML = parseInt(children[j].innerHTML) + n;
+    }
+  }
 }
 
 function deepestChild(){
 
+  let node = document.getElementById('grand-node');
+
+  let nextNode = node.children[0];
+
+  while (nextNode) {
+    node = nextNode;
+    nextNode = node.children[0];
+  }
+  return node;
 }
